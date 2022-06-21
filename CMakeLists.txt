@@ -11,8 +11,9 @@ if(CUDA_FOUND)
             -DLINK_LIBRARIES:STRING=${CUDA_CUDART_LIBRARY}
         COMPILE_OUTPUT_VARIABLE COMPILE_OUTPUT_VAR
         RUN_OUTPUT_VARIABLE RUN_OUTPUT_VAR)
-	message("---------${CUDA_TOOLKIT_INCLUDE}--------")
+	message("-------------------------")
     message("${RUN_OUTPUT_VAR}") # Display number of GPUs found
+	message("-------------------------")
     # COMPILE_RESULT_VAR is TRUE when compile succeeds
     # RUN_RESULT_VAR is zero when a GPU is found
     if(COMPILE_RESULT_VAR AND NOT RUN_RESULT_VAR)
